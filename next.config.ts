@@ -1,7 +1,26 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {
+        qualities: [90],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'admin.nextlevelshop.md',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'barbercompany.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
+        unoptimized: process.env.NODE_ENV === 'development',
+    },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);
