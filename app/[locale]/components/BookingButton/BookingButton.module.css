@@ -1,0 +1,5 @@
+.booking_button {
+  background-color: var(--orange);
+  min-height: 50px;
+  letter-spacing: 2px;
+}

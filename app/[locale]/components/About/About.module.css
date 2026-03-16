@@ -1,0 +1,10 @@
+.about_card {
+  padding: 2em;
+  max-width: 1000px;
+  z-index: 1;
+  line-height: 1.6em;
+}
+
+.about_card li {
+  color: var(--dark_gray);
+}

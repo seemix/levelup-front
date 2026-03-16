@@ -1,0 +1,59 @@
+.barber_card {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  line-height: 1.3em;
+  gap: 25px;
+}
+
+.barber_card p {
+  color: var(--dark_gray);
+}
+
+.card_picture_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barber_card h2 {
+  font-size: 25px;
+  text-align: left;
+}
+
+.barber_card h3 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.card_picture {
+  width: 325px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  transition: scale 0.4s ease-in-out;
+}
+
+.card_picture:hover {
+  filter: grayscale(0.9);
+}
+
+.barber_text h4 {
+  font-size: 15px;
+  line-height: 14px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .barber_card {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .barber_card h2 {
+    text-align: center;
+  }
+}

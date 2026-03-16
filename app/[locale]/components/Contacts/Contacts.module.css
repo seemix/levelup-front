@@ -1,0 +1,42 @@
+.contact_form {
+  padding: 10px 40px;
+  min-height: 490px;
+  width: 340px;
+  margin-bottom: 20px;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+.contact_form p {
+  margin-left: 10px;
+}
+
+.contact_form h3 {
+  color: var(--light_gray);
+  font-size: 19px;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.contact_form a {
+  text-decoration: none;
+  color: var(--dark_gray);
+}
+
+.map {
+  height: inherit;
+  padding: 5px;
+  width: 450px;
+  max-width: 95vw;
+  overflow: hidden;
+}
+
+.icon_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  margin-top: 30px;
+}

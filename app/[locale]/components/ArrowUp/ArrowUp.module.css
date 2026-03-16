@@ -1,0 +1,7 @@
+.arrow_up {
+  background-color: var(--orange);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+}

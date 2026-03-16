@@ -1,0 +1,43 @@
+.bs {
+  font-family: "barber-icon", serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.service_card {
+  width: 340px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.service_card h3 {
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+  color: var(--light_gray);
+}
+
+.price_icon_wrap {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: var(--orange);
+  display: block;
+  text-align: center;
+}
+
+.price_item {
+  margin-bottom: 30px;
+}
+
+.time {
+  margin-left: 25px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--dark_gray);
+}
