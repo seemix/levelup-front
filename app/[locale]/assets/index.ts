@@ -1,14 +1,14 @@
 export const assets = {
-  barbershopName: "Level Up",
-  instagramUrl: "https://www.instagram.com/lvlup_barbershop/",
-  languages: ["RU", "EN", "RO"],
-  currency: "MDL",
-  frontendUrl: "http://localhost:3001",
-  backendUrl: "http://localhost:3000",
-  apiUrl: "http://localhost:3000/api/",
+    barbershopName: 'Level Up',
+    instagramUrl: 'https://www.instagram.com/lvlup_barbershop/',
+    languages: ['RU', 'EN', 'RO'],
+    currency: 'MDL',
+    frontendUrl: 'http://localhost:3001',
+    backendUrl: 'http://localhost:3000',
+    apiUrl: 'http://localhost:3000/api/',
 };
 export const animation = {
-  initial: "hidden",
-  whileInView: "visible",
-  viewport: { once: true },
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: true },
 };

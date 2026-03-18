@@ -1,19 +1,19 @@
 .price {
-  font-family: "Prata", sans-serif;
-  font-size: 18px;
-  color: var(--dark_gray);
-  font-weight: 700;
-  position: absolute;
-  top: 0;
-  right: 0;
+    font-family: "Prata", sans-serif;
+    font-size: 18px;
+    color: var(--dark_gray);
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .services {
-    padding: 15px 0;
-  }
+    .services {
+        padding: 15px 0;
+    }
 
-  .price {
-    font-size: 17px;
-  }
+    .price {
+        font-size: 17px;
+    }
 }

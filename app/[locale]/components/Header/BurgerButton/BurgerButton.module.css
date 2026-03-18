@@ -1,68 +1,68 @@
 :root {
-  --bar-width: 27px;
-  --bar-height: 3px;
-  --hamburger-gap: 5px;
-  --foreground: #333;
-  --background: white;
-  --hamburger-margin: 8px;
-  --animation-timing: 200ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --bar-width: 27px;
+    --bar-height: 3px;
+    --hamburger-gap: 5px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 .button_wrapper {
-  width: 35px;
-  margin-right: 10px;
+    width: 35px;
+    margin-right: 10px;
 }
 
 .hamburger_menu {
-  --x-width: calc(var(--hamburger-height) * 1.41421356237);
-  display: flex;
-  flex-direction: column;
-  gap: var(--hamburger-gap);
-  width: max-content;
-  top: var(--hamburger-margin);
-  left: var(--hamburger-margin);
-  z-index: 2;
-  cursor: pointer;
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
 }
 
 .top_bar,
 .bottom_bar,
 .center_bar {
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: var(--background);
-  border-radius: 9999px;
-  transform-origin: left center;
-  transition:
-    opacity var(--animation-timing),
-    width var(--animation-timing),
-    rotate var(--animation-timing),
-    translate var(--animation-timing),
-    background-color var(--animation-timing);
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--background);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition:
+        opacity var(--animation-timing),
+        width var(--animation-timing),
+        rotate var(--animation-timing),
+        translate var(--animation-timing),
+        background-color var(--animation-timing);
 }
 
 .hamburger_menu input {
-  appearance: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  pointer-events: none;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
 }
 
 .center_bar.open {
-  width: 0;
-  visibility: hidden;
+    width: 0;
+    visibility: hidden;
 }
 
 .top_bar.open {
-  rotate: 45deg;
-  width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / -2);
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
 }
 
 .bottom_bar.open {
-  rotate: -45deg;
-  width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / 2);
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
 }

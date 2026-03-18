@@ -1,36 +1,36 @@
 .slider_container {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100dvh;
-  top: 0;
-  background-color: var(--black);
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100dvh;
+    top: 0;
+    background-color: var(--black);
 }
 
 .overlay {
-  width: 100%;
-  height: 100dvh;
-  background: rgba(0, 0, 0, 0.35);
-  position: fixed;
-  z-index: 2;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    z-index: 2;
 }
 
 .image_container {
-  width: 100%;
-  height: 100dvh;
+    width: 100%;
+    height: 100dvh;
 }
 
 .pic {
-  width: 100%;
-  height: 100dvh;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 767px) {
-  .slider_welcome {
-    top: 70%;
-    justify-content: space-between;
-  }
+    .slider_welcome {
+        top: 70%;
+        justify-content: space-between;
+    }
 }

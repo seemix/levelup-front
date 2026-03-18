@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import css from "./Loader.module.css";
+import css from './Loader.module.css';
 
 export default function Loader() {
-  return (
-    <div className={css.loader_container}>
-      <div className={css.loader_spin}></div>
-      <div className={css.loader}></div>
-    </div>
-  );
+    return (
+        <div className={css.loader_container}>
+            <div className={css.loader_spin}></div>
+            <div className={css.loader}></div>
+        </div>
+    );
 }

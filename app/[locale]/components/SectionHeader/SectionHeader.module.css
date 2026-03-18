@@ -1,12 +1,12 @@
 .caption_top_line {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
 }
 
 .caption_top_line h4 {
-  color: var(--orange);
-  margin-top: 10px;
-  z-index: 1;
+    color: var(--orange);
+    margin-top: 10px;
+    z-index: 1;
 }
