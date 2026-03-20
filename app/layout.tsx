@@ -18,7 +18,7 @@ const oswald = Oswald({
 });
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     const { apiUrl } = assets;
-    const { docs } = await fetch(`${apiUrl}slides`).then((res) => res.json());
+    const { docs } = await fetch(`${apiUrl}/slides`).then((res) => res.json());
 
     return (
         <html lang={'ru'}>

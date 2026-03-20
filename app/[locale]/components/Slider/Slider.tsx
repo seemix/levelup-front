@@ -18,7 +18,7 @@ export default function Slider({ slides }: { slides: Slide[] }) {
     const { backendUrl } = assets;
     return (
         <main className={css.slider_container}>
-            <div className={css.overlay} />
+            <div className={css.overlay}/>
             {slides && (
                 <motion.div {...animation} variants={slideAppearAnimation}>
                     <Swiper {...swiperSettings}>
@@ -27,7 +27,7 @@ export default function Slider({ slides }: { slides: Slide[] }) {
                                 <Image
                                     src={`${backendUrl}/${slide.image.url}`}
                                     alt={slide.image.alt}
-                                  //  placeholder={'blur'}
+                                    placeholder={'blur'}
                                     blurDataURL={slide.image.blurHash}
                                     fill
                                     className={css.pic}

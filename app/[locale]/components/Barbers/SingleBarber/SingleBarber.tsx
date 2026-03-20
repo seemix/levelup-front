@@ -13,13 +13,13 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
             <div className={css.card_picture_wrapper}>
                 <div className={css.image_container}>
                     <Image
-                        src={`${assets.backendUrl}${barber.image.url}`}
+                        src={`${assets.backendUrl}/${barber.image.url}`}
                         alt={barber.name}
                         quality={90}
                         fill
-                       // placeholder='blur'
+                        placeholder="blur"
                         blurDataURL={barber.image.blurHash}
-                        sizes='(max-width: 800px) 100vw, 325px'
+                        sizes="(max-width: 800px) 100vw, 325px"
                         className={css.card_picture}
                         priority={false}
                     />
@@ -28,7 +28,7 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
             <div>
                 <h2>{barber.name}</h2>
                 <h3>{barber.description}</h3>
-                <RichText data={barber.about} />
+                <RichText data={barber.about}/>
             </div>
         </div>
     );
