@@ -30,7 +30,7 @@ export default function Header() {
     }, []);
 
     const menuRef = useRef<HTMLButtonElement>(null);
-    useClickOutside(menuRef, () => clickMenu(), openMenu);
+    useClickOutside(clickMenu);
 
     return (
         <header className={!scroll ? css.header_wrapper : `${css.header_wrapper} ${css.scroll}`}>
@@ -52,7 +52,7 @@ export default function Header() {
                 </div>
             </div>
             <button ref={menuRef} type={'button'} style={{ all: 'unset', cursor: 'pointer' }}>
-                <Menu openMenu={openMenu} />
+                <Menu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
             </button>
             <button ref={menuRef} className={`button_reset ${css.burger_button}`} onClick={clickMenu} type={'button'}>
                 <BurgerButton openMenu={openMenu} />
