@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
         qualities: [90],
         remotePatterns: [
             {
-                protocol: 'https',
-                hostname: 'admin.nextlevelshop.md',
+                protocol: 'http',
+                hostname: '195.178.106.119:3002',
                 port: '',
                 pathname: '/**',
             },
