@@ -13,7 +13,7 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
             <div className={css.card_picture_wrapper}>
                 <div className={css.image_container}>
                     <Image
-                        src={`${assets.backendUrl}/${barber.image.url}`}
+                        src={`${assets.backendUrl}${barber.image.url}`}
                         alt={barber.name}
                         quality={90}
                         fill

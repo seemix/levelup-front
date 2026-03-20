@@ -25,7 +25,7 @@ export default function Slider({ slides }: { slides: Slide[] }) {
                         {slides?.map((slide) => (
                             <SwiperSlide key={slide.id} className={css.image_container}>
                                 <Image
-                                    src={`${backendUrl}/${slide.image.url}`}
+                                    src={`${backendUrl}${slide.image.url}`}
                                     alt={slide.image.alt}
                                     placeholder={'blur'}
                                     blurDataURL={slide.image.blurHash}
