@@ -27,6 +27,8 @@ export default function Slider({ slides }: { slides: Slide[] }) {
                                 <Image
                                     src={`${backendUrl}/${slide.image.url}`}
                                     alt={slide.image.alt}
+                                    placeholder={'blur'}
+                                    blurDataURL={slide.image.blurHash}
                                     fill
                                     className={css.pic}
                                 />

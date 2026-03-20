@@ -17,6 +17,8 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
                         alt={barber.name}
                         quality={90}
                         fill
+                        placeholder='blur'
+                        blurDataURL={barber.image.blurHash}
                         sizes='(max-width: 800px) 100vw, 325px'
                         className={css.card_picture}
                         priority={false}

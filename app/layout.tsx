@@ -1,7 +1,7 @@
-import Script from 'next/script';
 import { Inter, Oswald } from 'next/font/google';
 import { assets } from '@/app/[locale]/assets';
 import { Slider } from '@/app/[locale]/components';
+import EasyWeekWidget from '@/app/EasyWeekWidget';
 
 const inter = Inter({
     subsets: ['latin', 'cyrillic'],
@@ -21,23 +21,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     const { docs } = await fetch(`${apiUrl}slides`).then((res) => res.json());
 
     return (
-        <html lang="ru">
+        <html lang={'ru'}>
         <body className={`${inter.variable} ${oswald.variable}`}>
         <Slider slides={docs}/>
         {children}
-        <Script
-            src={'/widget.js'}
-            strategy={'afterInteractive'}
-        />
-        <Script id={'easyweek-init'} strategy={'afterInteractive'}>
-            {`
-            var ewWidget = new EasyWeekWidget({
-              url: 'https://booking.easyweek.io/levelup-barbershop',
-              button: null,
-              trigger: '.booking'
-            });
-          `}
-        </Script>
+        <EasyWeekWidget/>
         </body>
         </html>
     );
