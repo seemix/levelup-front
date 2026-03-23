@@ -1,6 +1,6 @@
 import { Inter, Oswald } from 'next/font/google';
 import { assets } from '@/app/[locale]/assets';
-import { Slider } from '@/app/[locale]/components';
+import { ScrollHandler, Slider } from '@/app/[locale]/components';
 import EasyWeekWidget from '@/app/EasyWeekWidget';
 
 const inter = Inter({
@@ -23,6 +23,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang={'ru'}>
         <body className={`${inter.variable} ${oswald.variable}`}>
+        <ScrollHandler/>
         <Slider slides={docs}/>
         {children}
         <EasyWeekWidget/>

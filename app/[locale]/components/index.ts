@@ -11,6 +11,7 @@ export { default as LanguageSwitcher } from './Header/LanguageSwitcher/LanguageS
 export { default as Menu } from './Header/Menu/Menu';
 export { default as Loader } from './Loader/Loader';
 export { default as Main } from './Main/Main';
+export { default as ScrollHandler } from './ScrollHandler/ScrollHandler';
 export { default as WelcomeHeader } from './Main/WelcomeHeader/WelcomeHeader';
 export { default as SectionHeader } from './SectionHeader/SectionHeader';
 export { default as Services } from './Services/Services';

@@ -15,13 +15,20 @@ export default function LanguageSwitcher({ scroll }: { scroll: boolean }) {
 
     const changeLanguage = (lang: string) => {
         const segments = pathname.split('/');
+        const newLang = lang.toLowerCase();
 
-        if (segments[1] === lang.toLowerCase()) return;
+        if (segments[1] === newLang) return;
 
-        segments[1] = lang.toLowerCase();
+        // Якщо хеша немає, зберігаємо пікселі, щоб хендлер нас повернув
+        if (!window.location.hash) {
+            sessionStorage.setItem('pendingScroll', window.scrollY.toString());
+        }
+
+        segments[1] = newLang;
         const newPath = segments.join('/') + window.location.hash;
 
-        router.replace(newPath);
+        // Вимикаємо дефолтний скрол Next.js
+        router.replace(newPath, { scroll: false });
     };
 
     return (
