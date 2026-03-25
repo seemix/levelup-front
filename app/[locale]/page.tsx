@@ -6,17 +6,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     const { locale } = await params;
 
     const { content } = await fetch(`${apiUrl}/globals/about-us?locale=${locale}`).then((res) => res.json());
-    const { docs } = await fetch(`${apiUrl}/barbers?locale=${locale}`).then((res) => res.json());
+    const { docs } = await fetch(`${apiUrl}/barbers?locale=${locale}&?sort=createdAt`).then((res) => res.json());
     return (
         <>
-            <Header />
-            <Main loading={false} />
-            <About content={content} />
-            <Services />
-            <Barbers barbers={docs} />
-            <Contacts />
-            <Footer />
-            <ArrowUp />
+            <Header/>
+            <Main loading={false}/>
+            <About content={content}/>
+            <Services/>
+            <Barbers barbers={docs}/>
+            <Contacts/>
+            <Footer/>
+            <ArrowUp/>
         </>
     );
 }
