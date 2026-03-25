@@ -3,9 +3,9 @@ export const assets = {
     instagramUrl: 'https://www.instagram.com/lvlup_barbershop/',
     languages: ['RU', 'EN', 'RO'],
     currency: 'MDL',
-    frontendUrl: 'http://195.178.106.119:3003',
-    backendUrl: 'http://195.178.106.119:3002',
-    apiUrl: 'http://195.178.106.119:3002/api',
+    frontendUrl: 'https://levelupbalti.com',
+    backendUrl: 'https://admin.levelupbalti.com',
+    apiUrl: 'https://admin.levelupbalti.com/api',
 };
 export const animation = {
     initial: 'hidden',
