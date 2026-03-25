@@ -11,3 +11,14 @@ export const blockAnimation: Variants = {
         transition: { delay: custom * 0.3, duration: 0.6, ease: 'easeInOut' },
     }),
 };
+
+export const mapAnimation: Variants = {
+    hidden: {
+        opacity: 0,
+        x: 30
+    },
+    visible: (custom) => ({
+        opacity: 1,
+        transition: { duration: custom * .2, ease: 'easeInOut' },
+    }),
+}

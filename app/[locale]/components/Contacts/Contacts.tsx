@@ -7,7 +7,7 @@ import { MdOutlineEventAvailable, MdPhoneIphone } from 'react-icons/md';
 import { useTranslations } from 'use-intl';
 import { animation } from '@/app/[locale]/assets';
 import { SectionHeader } from '@/app/[locale]/components';
-import { blockAnimation } from '@/app/[locale]/components/Contacts/animations';
+import { blockAnimation, mapAnimation } from '@/app/[locale]/components/Contacts/animations';
 import css from './Contacts.module.css';
 
 export default function Contacts() {
@@ -46,7 +46,7 @@ export default function Contacts() {
                     <p>{t('monSat')} </p>
                     <p> {t('sun')} </p>
                 </motion.div>
-                <motion.div {...animation} custom={3} variants={blockAnimation} className={css.map}>
+                <motion.div {...animation} custom={3} variants={mapAnimation} className={css.map}>
                     <iframe
                         title='GoogleMAP'
                         src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.0986813230234!2d27.892893!3d47.7795345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb5f7549b92381%3A0xc81f8e9f0ebaa132!2sLevel%20Up%20Barbershop!5e0!3m2!1sen!2s!4v1669068548349!5m2!1sen!2s'
