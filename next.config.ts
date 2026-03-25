@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
         qualities: [90],
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: '195.178.106.119',
-                port: '3002',
+                protocol: 'https',
+                hostname: 'admin.levelupbalti.com',
+                port: '',
                 pathname: '/**',
             },
             {
