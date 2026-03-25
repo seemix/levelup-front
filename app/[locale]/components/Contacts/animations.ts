@@ -19,6 +19,7 @@ export const mapAnimation: Variants = {
     },
     visible: (custom) => ({
         opacity: 1,
+        x: 0,
         transition: { delay: custom * .4, duration: .7, ease: 'easeInOut' },
     }),
 };
