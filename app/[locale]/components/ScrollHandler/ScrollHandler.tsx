@@ -9,7 +9,6 @@ export default function ScrollHandler() {
     useEffect(() => {
         const hash = window.location.hash;
 
-        // Спроба відновити позицію, якщо вона була збережена в sessionStorage
         const savedScroll = sessionStorage.getItem('pendingScroll');
 
         const handleScroll = () => {
@@ -29,11 +28,10 @@ export default function ScrollHandler() {
             }
         };
 
-        // Використовуємо 100мс — це "золота середина"
         const timeoutId = setTimeout(handleScroll, 500);
 
         return () => clearTimeout(timeoutId);
-    }, [pathname]); // Хеш зазвичай змінюється разом із pathname при зміні мови
+    }, [pathname]);
 
     return null;
 }

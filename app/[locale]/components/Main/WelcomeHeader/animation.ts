@@ -12,6 +12,6 @@ export const headerAnimation: Variants = {
         scale: 1,
         opacity: 1,
         filter: 'blur(0)',
-        transition: { delay: custom * .2, duration: .5, ease: 'easeInOut' },
+        transition: { delay: custom * .35, duration: .5, ease: 'easeInOut' },
     }),
 };

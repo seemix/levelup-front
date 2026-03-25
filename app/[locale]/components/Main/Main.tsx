@@ -10,8 +10,8 @@ export default function Main({ loading }: { loading: boolean }) {
                 <div className={css.slider_welcome}>
                     {!loading && (
                         <>
-                            <WelcomeHeader />
-                            <BookingButton />
+                            <WelcomeHeader/>
+                            <BookingButton/>
                         </>
                     )}
                 </div>
