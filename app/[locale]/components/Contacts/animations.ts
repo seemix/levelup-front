@@ -8,7 +8,7 @@ export const blockAnimation: Variants = {
     visible: (custom) => ({
         opacity: 1,
         y: 0,
-        transition: { delay: custom * 0.3, duration: 0.6, ease: 'easeInOut' },
+        transition: { delay: custom * .3, duration: .6, ease: 'easeInOut' },
     }),
 };
 
@@ -19,6 +19,6 @@ export const mapAnimation: Variants = {
     },
     visible: (custom) => ({
         opacity: 1,
-        transition: { duration: custom * .2, ease: 'easeInOut' },
+        transition: { delay: custom * .4, duration: .7, ease: 'easeInOut' },
     }),
-}
+};
