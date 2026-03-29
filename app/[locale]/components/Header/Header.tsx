@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <header className={!scroll ? css.header_wrapper : `${css.header_wrapper} ${css.scroll}`}>
-            <div className={css.logo} />
+            <div className={css.logo}/>
             <div className={css.lang_switcher_wrapper}>
                 <div>
                     <a
@@ -44,18 +44,19 @@ export default function Header() {
                         rel={'noreferrer'}
                         aria-label={'instagram'}
                     >
-                        <FaInstagram size={'2em'} />
+                        <FaInstagram size={'2em'}/>
                     </a>
                 </div>
                 <div>
-                    <LanguageSwitcher scroll={scroll} />
+                    <LanguageSwitcher scroll={scroll}/>
                 </div>
             </div>
             <button ref={menuRef} type={'button'} style={{ all: 'unset', cursor: 'pointer' }}>
                 <Menu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
             </button>
-            <button ref={menuRef} className={`button_reset ${css.burger_button}`} onClick={clickMenu} type={'button'}>
-                <BurgerButton openMenu={openMenu} />
+            <button ref={menuRef} className={`button_reset ${css.burger_button}`} onClick={clickMenu} type={'button'}
+                    aria-label={'menu-button'}>
+                <BurgerButton openMenu={openMenu}/>
             </button>
         </header>
     );
