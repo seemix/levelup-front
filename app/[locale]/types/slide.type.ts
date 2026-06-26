@@ -14,4 +14,5 @@ export type Slide = {
     createdAt: string;
     updatedAt: string;
     image: MediaImage;
+    verticalImage: MediaImage;
 };

@@ -11,7 +11,9 @@ export default function WelcomeHeader() {
     return (
         <div className={css.welcome}>
             <motion.h1 {...animation} custom={0} variants={headerAnimation}>
-                {t('welcome')} {assets.barbershopName}
+                {t('welcome')}
+                <br />
+                {assets.barbershopName}
             </motion.h1>
         </div>
     );

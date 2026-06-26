@@ -24,14 +24,26 @@ export default function Slider({ slides }: { slides: Slide[] }) {
                     <Swiper {...swiperSettings}>
                         {slides?.map((slide) => (
                             <SwiperSlide key={slide.id} className={css.image_container}>
-                                <Image
-                                    src={`${backendUrl}${slide.image.url}`}
-                                    alt={slide.image.alt}
-                                    placeholder={'blur'}
-                                    blurDataURL={slide.image.blurHash}
-                                    fill
-                                    className={css.pic}
-                                />
+                                <div className={css.mobile_only}>
+                                    <Image
+                                        src={`${backendUrl}${slide.verticalImage.url}`}
+                                        alt={slide.verticalImage.alt}
+                                        placeholder={'blur'}
+                                        blurDataURL={slide.verticalImage.blurHash}
+                                        fill
+                                        className={css.pic}
+                                    />
+                                </div>
+                                <div className={css.desktop_only}>
+                                    <Image
+                                        src={`${backendUrl}${slide.image.url}`}
+                                        alt={slide.image.alt}
+                                        placeholder={'blur'}
+                                        blurDataURL={slide.image.blurHash}
+                                        fill
+                                        className={css.pic}
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
