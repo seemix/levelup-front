@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { MdPhoneIphone } from 'react-icons/md';
-import { useTranslations } from 'use-intl';
-import { BookingButton } from '@/app/[locale]/components';
+import BookingButton from '@/app/[locale]/components/BookingButton/BookingButton';
 import logo from '../Header/logo.webp';
 
 import css from './Footer.module.css';
@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <footer className={css.footer}>
             <div className={css.footer_widget}>
-                <Image src={logo.src} alt='logo' width={220} height={64} />
+                <Image src={logo} alt='logo' width={220} height={64} />
             </div>
             <div className={css.footer_widget}>
                 <h5>{t('address')}</h5>

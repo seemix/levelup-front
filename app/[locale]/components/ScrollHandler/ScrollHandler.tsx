@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 export default function ScrollHandler() {
     const pathname = usePathname();
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: re-run on every route/locale change
     useEffect(() => {
         const hash = window.location.hash;
 
@@ -23,7 +24,7 @@ export default function ScrollHandler() {
             }
 
             if (savedScroll) {
-                window.scrollTo({ top: parseInt(savedScroll), behavior: 'instant' });
+                window.scrollTo({ top: Number.parseInt(savedScroll, 10), behavior: 'instant' });
                 sessionStorage.removeItem('pendingScroll');
             }
         };

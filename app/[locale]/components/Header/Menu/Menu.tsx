@@ -1,13 +1,12 @@
 'use client';
 
-import type { Dispatch, SetStateAction } from 'react';
 import { useTranslations } from 'next-intl';
+import type { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-scroll';
-
-import { menuItems } from './menuItems';
 import css from './Menu.module.css';
-type Props = {
+import { menuItems } from './menuItems';
 
+type Props = {
     openMenu: boolean;
     setOpenMenu: Dispatch<SetStateAction<boolean>>;
 };
@@ -30,7 +29,9 @@ export default function Menu({ openMenu, setOpenMenu }: Props) {
                             duration={800}
                             offset={-10}
                             to={item.to}
-                            onClick={() => {handleScroll(`#${item.to}`)}}
+                            onClick={() => {
+                                handleScroll(`#${item.to}`);
+                            }}
                             className={css.nav_link}
                             aria-label={item.name}
                         >

@@ -1,4 +1,4 @@
-import type { SerializedEditorState } from 'lexical';
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
 
 export type BarberType = {
     id: string;

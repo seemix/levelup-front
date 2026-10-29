@@ -1,10 +1,10 @@
 'use client';
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import { motion } from 'framer-motion';
-import type { SerializedEditorState } from 'lexical';
 import { animation } from '@/app/[locale]/assets';
-import { SectionHeader } from '@/app/[locale]/components';
 import { blockAnimation } from '@/app/[locale]/components/About/animations';
+import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';
 import css from './About.module.css';
 
 export default function About({ content }: { content: SerializedEditorState }) {

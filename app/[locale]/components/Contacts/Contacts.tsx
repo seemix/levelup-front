@@ -1,13 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { BsInstagram } from 'react-icons/bs';
 import { GrLocation } from 'react-icons/gr';
 import { MdOutlineEventAvailable, MdPhoneIphone } from 'react-icons/md';
-import { useTranslations } from 'use-intl';
 import { animation } from '@/app/[locale]/assets';
-import { SectionHeader } from '@/app/[locale]/components';
 import { blockAnimation, mapAnimation } from '@/app/[locale]/components/Contacts/animations';
+import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';
 import css from './Contacts.module.css';
 
 export default function Contacts() {

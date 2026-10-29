@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'use-intl';
+import { useTranslations } from 'next-intl';
 import { animation, assets } from '@/app/[locale]/assets';
 import { headerAnimation } from '@/app/[locale]/components/Main/WelcomeHeader/animation';
 import css from './WelcomeHeader.module.css';

@@ -21,7 +21,8 @@
     height: 100dvh;
 }
 
-.desktop_only, .mobile_only {
+.desktop_only,
+.mobile_only {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +47,6 @@
         display: none;
     }
 }
-
 
 @media (min-width: 768px) {
     .mobile_only {

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
@@ -17,7 +17,7 @@ export default function ArrowUp() {
 
         updatePosition();
 
-        window.addEventListener('scroll', updatePosition);
+        window.addEventListener('scroll', updatePosition, { passive: true });
         return () => window.removeEventListener('scroll', updatePosition);
     }, []);
 
@@ -42,7 +42,7 @@ export default function ArrowUp() {
                     whileHover={'hover'}
                     whileTap={'tap'}
                 >
-                    <FaArrowUp size={'.8em'}/>
+                    <FaArrowUp size={'.8em'} />
                 </motion.button>
             )}
         </AnimatePresence>

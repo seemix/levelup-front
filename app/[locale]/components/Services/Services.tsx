@@ -1,7 +1,6 @@
-'use client';
-
-import { SectionHeader, SingleServiceCard } from '@/app/[locale]/components';
+import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';
 import { servicesData } from '@/app/[locale]/components/Services/servicesData';
+import SingleServiceCard from './SingleServiceCard/SingleServiceCard';
 
 export default function Services() {
     return (

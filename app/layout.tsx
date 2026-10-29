@@ -1,6 +1,8 @@
 import { Inter, Oswald } from 'next/font/google';
-import { assets } from '@/app/[locale]/assets';
-import { ScrollHandler, Slider } from '@/app/[locale]/components';
+import ScrollHandler from '@/app/[locale]/components/ScrollHandler/ScrollHandler';
+import Slider from '@/app/[locale]/components/Slider/Slider';
+import { fetchApi } from '@/app/[locale]/lib/api';
+import type { Slide } from '@/app/[locale]/types/slide.type';
 import EasyWeekWidget from '@/app/EasyWeekWidget';
 
 const inter = Inter({
@@ -12,22 +14,22 @@ const inter = Inter({
 
 const oswald = Oswald({
     subsets: ['latin', 'cyrillic'],
-    weight: ['200', '300', '400', '500', '600', '700'],
+    weight: ['300', '400', '500', '600', '700'],
     display: 'swap',
     variable: '--font-oswald',
 });
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    const { apiUrl } = assets;
-    const { docs } = await fetch(`${apiUrl}/slides`).then((res) => res.json());
+    const { docs } = await fetchApi<{ docs: Slide[] }>('/slides');
 
     return (
         <html lang={'ru'}>
-        <body className={`${inter.variable} ${oswald.variable}`}>
-        <ScrollHandler/>
-        <Slider slides={docs}/>
-        {children}
-        <EasyWeekWidget/>
-        </body>
+            <body className={`${inter.variable} ${oswald.variable}`}>
+                <ScrollHandler />
+                <Slider slides={docs} />
+                {children}
+                <EasyWeekWidget />
+            </body>
         </html>
     );
 }

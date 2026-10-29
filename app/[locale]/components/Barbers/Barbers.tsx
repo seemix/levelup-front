@@ -3,10 +3,11 @@
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { animation } from '@/app/[locale]/assets';
-import { SectionHeader, SingleBarber } from '@/app/[locale]/components';
 import { blockAnimation } from '@/app/[locale]/components/Barbers/animations';
 import type { BarberType } from '@/app/[locale]/components/Barbers/barberType';
+import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';
 import css from './Barbers.module.css';
+import SingleBarber from './SingleBarber/SingleBarber';
 import { swiperSettings } from './swiperSettings';
 
 export default function Barbers({ barbers }: { barbers: BarberType[] }) {

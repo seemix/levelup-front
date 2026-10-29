@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { RichText } from '@payloadcms/richtext-lexical/react';
+import Image from 'next/image';
 
 import { assets } from '@/app/[locale]/assets';
 import type { BarberType } from '@/app/[locale]/components/Barbers/barberType';
@@ -19,7 +19,7 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
                         fill
                         placeholder={'blur'}
                         blurDataURL={barber.image.blurHash}
-                        sizes="(max-width: 800px) 100vw, 325px"
+                        sizes='(max-width: 800px) 100vw, 325px'
                         className={css.card_picture}
                         priority={false}
                     />
@@ -28,7 +28,7 @@ export default function SingleBarber({ barber }: { barber: BarberType }) {
             <div>
                 <h2>{barber.name}</h2>
                 <h3>{barber.description}</h3>
-                <RichText data={barber.about}/>
+                <RichText data={barber.about} />
             </div>
         </div>
     );

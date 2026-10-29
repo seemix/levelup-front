@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaInstagram } from 'react-icons/fa';
 import { assets } from '@/app/[locale]/assets';
-import { BurgerButton, LanguageSwitcher, Menu } from '@/app/[locale]/components';
-import { useClickOutside } from '@/app/[locale]/hooks/useClickOutside';
+import BurgerButton from './BurgerButton/BurgerButton';
 import css from './Header.module.css';
+import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
+import Menu from './Menu/Menu';
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -22,19 +23,16 @@ export default function Header() {
 
         handleScroll();
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    const menuRef = useRef<HTMLButtonElement>(null);
-    useClickOutside(clickMenu);
-
     return (
         <header className={!scroll ? css.header_wrapper : `${css.header_wrapper} ${css.scroll}`}>
-            <div className={css.logo}/>
+            <div className={css.logo} />
             <div className={css.lang_switcher_wrapper}>
                 <div>
                     <a
@@ -44,19 +42,23 @@ export default function Header() {
                         rel={'noreferrer'}
                         aria-label={'instagram'}
                     >
-                        <FaInstagram size={'2em'}/>
+                        <FaInstagram size={'2em'} />
                     </a>
                 </div>
                 <div>
-                    <LanguageSwitcher scroll={scroll}/>
+                    <LanguageSwitcher scroll={scroll} />
                 </div>
             </div>
-            <button ref={menuRef} type={'button'} style={{ all: 'unset', cursor: 'pointer' }}>
-                <Menu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
+            <button type={'button'} style={{ all: 'unset', cursor: 'pointer' }}>
+                <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />
             </button>
-            <button ref={menuRef} className={`button_reset ${css.burger_button}`} onClick={clickMenu} type={'button'}
-                    aria-label={'menu-button'}>
-                <BurgerButton openMenu={openMenu}/>
+            <button
+                className={`button_reset ${css.burger_button}`}
+                onClick={clickMenu}
+                type={'button'}
+                aria-label={'menu-button'}
+            >
+                <BurgerButton openMenu={openMenu} />
             </button>
         </header>
     );

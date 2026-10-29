@@ -18,7 +18,7 @@ export default function Slider({ slides }: { slides: Slide[] }) {
     const { backendUrl } = assets;
     return (
         <main className={css.slider_container}>
-            <div className={css.overlay}/>
+            <div className={css.overlay} />
             {slides && (
                 <motion.div {...animation} variants={slideAppearAnimation}>
                     <Swiper {...swiperSettings}>
