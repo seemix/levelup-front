@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import type { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-scroll';
+
 import css from './Menu.module.css';
 import { menuItems } from './menuItems';
 

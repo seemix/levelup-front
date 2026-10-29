@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { RiScissorsLine } from 'react-icons/ri';
+
 import { animation, assets } from '@/app/[locale]/assets';
 import { captionAnimation, leftXAnimation, rightXAnimation } from '@/app/[locale]/components/SectionHeader/animations';
 import css from './SectionHeader.module.css';

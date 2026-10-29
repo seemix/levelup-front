@@ -1,4 +1,5 @@
 import { Inter, Oswald } from 'next/font/google';
+
 import ScrollHandler from '@/app/[locale]/components/ScrollHandler/ScrollHandler';
 import Slider from '@/app/[locale]/components/Slider/Slider';
 import { fetchApi } from '@/app/[locale]/lib/api';

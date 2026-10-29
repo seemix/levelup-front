@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MdPhoneIphone } from 'react-icons/md';
+
 import BookingButton from '@/app/[locale]/components/BookingButton/BookingButton';
 import logo from '../Header/logo.webp';
-
 import css from './Footer.module.css';
 
 export default function Footer() {

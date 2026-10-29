@@ -2,6 +2,7 @@
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import { motion } from 'framer-motion';
+
 import { animation } from '@/app/[locale]/assets';
 import { blockAnimation } from '@/app/[locale]/components/About/animations';
 import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+
 import { generateSiteMetadata } from '@/app/[locale]/meta';
 import './globals.css';
 

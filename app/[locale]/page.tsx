@@ -1,4 +1,5 @@
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
+
 import About from '@/app/[locale]/components/About/About';
 import ArrowUp from '@/app/[locale]/components/ArrowUp/ArrowUp';
 import Barbers from '@/app/[locale]/components/Barbers/Barbers';

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+
 import { assets } from '@/app/[locale]/assets';
 
 type Locale = 'ru' | 'ro' | 'en';

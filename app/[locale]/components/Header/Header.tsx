@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FaInstagram } from 'react-icons/fa';
+
 import { assets } from '@/app/[locale]/assets';
 import BurgerButton from './BurgerButton/BurgerButton';
 import css from './Header.module.css';

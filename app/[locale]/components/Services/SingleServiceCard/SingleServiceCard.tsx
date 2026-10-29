@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { SlClock } from 'react-icons/sl';
+
 import { animation } from '@/app/[locale]/assets';
 import { blockAnimation } from '@/app/[locale]/components/Services/SingleServiceCard/animations';
 import type { ServiceType } from '@/app/[locale]/components/Services/serviceType';

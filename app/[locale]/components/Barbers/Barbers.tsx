@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { animation } from '@/app/[locale]/assets';
 import { blockAnimation } from '@/app/[locale]/components/Barbers/animations';
 import type { BarberType } from '@/app/[locale]/components/Barbers/barberType';

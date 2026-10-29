@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { BsInstagram } from 'react-icons/bs';
 import { GrLocation } from 'react-icons/gr';
 import { MdOutlineEventAvailable, MdPhoneIphone } from 'react-icons/md';
+
 import { animation } from '@/app/[locale]/assets';
 import { blockAnimation, mapAnimation } from '@/app/[locale]/components/Contacts/animations';
 import SectionHeader from '@/app/[locale]/components/SectionHeader/SectionHeader';
