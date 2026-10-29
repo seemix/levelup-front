@@ -29,7 +29,7 @@ export default function ScrollHandler() {
             }
         };
 
-        const timeoutId = setTimeout(handleScroll, 500);
+        const timeoutId = setTimeout(handleScroll, 100);
 
         return () => clearTimeout(timeoutId);
     }, [pathname]);
